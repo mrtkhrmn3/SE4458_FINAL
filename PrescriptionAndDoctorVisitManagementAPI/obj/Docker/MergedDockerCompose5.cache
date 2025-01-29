@@ -1,0 +1,53 @@
+name: dockercompose11995515512830408954
+services:
+  doctorservice:
+    build:
+      context: C:\Users\Mert\source\repos\PrescriptionAndDoctorVisitManagementAPI
+      dockerfile: DoctorService/Dockerfile
+    depends_on:
+      mongo:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ConnectionStrings__DbConnection: mongodb://mongo:27017/prescription_doctor_system_db
+    image: doctorservice
+    networks:
+      app_network: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "8080"
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\Mert\AppData\Roaming/Microsoft/UserSecrets
+        target: C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets
+        read_only: true
+        bind:
+          create_host_path: true
+  mongo:
+    container_name: mongodb
+    image: mongo:latest
+    networks:
+      app_network: null
+    ports:
+      - mode: ingress
+        target: 27017
+        published: "27017"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: mongo_data
+        target: /data/db
+        volume: {}
+networks:
+  app_network:
+    name: dockercompose11995515512830408954_app_network
+volumes:
+  mongo_data:
+    name: dockercompose11995515512830408954_mongo_data

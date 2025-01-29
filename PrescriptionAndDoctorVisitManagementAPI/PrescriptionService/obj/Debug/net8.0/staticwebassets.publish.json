@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "7zTH5ZuJaoSe6jWLUeIhNLvvS21NxjMqmKrbaqQOwb0=",
+  "Source": "PrescriptionService",
+  "BasePath": "_content/PrescriptionService",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

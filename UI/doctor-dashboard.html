@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Doctor Dashboard</h1>
+
+        <h2>Create Visit</h2>
+        <form id="createVisitForm">
+            <input type="text" id="doctorId" placeholder="Doctor ID" required>
+            <input type="text" id="tcNumber" placeholder="TC Number" required>
+            <input type="text" id="fullname" placeholder="Full Name" required>
+            <input type="datetime-local" id="visitDate" required>
+            <textarea id="visitNotes" placeholder="Visit Notes" required></textarea>
+            <button type="submit">Create Visit</button>
+        </form>
+
+        <h2>Create Prescription</h2>
+        <form id="createPrescriptionForm">
+            <input type="text" id="doctorId" placeholder="Doctor ID" required>
+            <input type="text" id="tcNumber" placeholder="TC Number" required>
+            <textarea id="medicines" placeholder="Medicines (name, quantity, price)" required></textarea>
+            <button type="submit">Create Prescription</button>
+        </form>
+
+        <div id="response"></div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:5140';
+
+
+function isValidGuid(guid) {
+    const regex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
+    return regex.test(guid);
+}
+
+// Create Visit
+document.getElementById('createVisitForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const doctorId = document.getElementById('doctorId').value;
+    const tcNumber = document.getElementById('tcNumber').value;
+    const fullname = document.getElementById('fullname').value;
+    const visitDate = document.getElementById('visitDate').value;
+    const notes = document.getElementById('visitNotes').value;
+
+
+    if (!isValidGuid(doctorId)) {
+        alert("Geçersiz Doctor ID formatı.");
+        return;
+    }
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/doctor/visits`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ doctorId, tcNumber, fullname, visitDate, notes })
+        });
+
+        const result = await response.json();
+        alert(result.message);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
+
+ // Create Prescription Form Submit Event
+ document.getElementById('createPrescriptionForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const doctorId = document.getElementById('doctorId').value;
+    const tcNumber = document.getElementById('tcNumber').value;
+    const medicinesText = document.getElementById('medicines').value.trim(); // textarea'dan alınan veriyi alıyoruz
+
+    // Medicineleri uygun bir formata dönüştür
+    const medicines = medicinesText.split('\n').map(line => {
+        const parts = line.split(','); // Virgülle ayır
+        return {
+            name: parts[0]?.trim(),
+            quantity: parseInt(parts[1]?.trim(), 10),
+            price: parseFloat(parts[2]?.trim())
+        };
+    });
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/doctor/prescriptions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                doctorId: doctorId,
+                tcNumber: tcNumber,
+                medicines: medicines
+            })
+        });
+
+        const result = await response.json();
+        document.getElementById('response').innerText = JSON.stringify(result, null, 2);
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('response').innerText = 'Failed to create prescription.';
+    }
+});
+    </script>
+</body>
+</html>

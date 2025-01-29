@@ -1,0 +1,123 @@
+name: dockercompose11995515512830408954
+services:
+  doctorservice:
+    build:
+      context: C:\Users\Mert\source\repos\PrescriptionAndDoctorVisitManagementAPI
+      dockerfile: DoctorService/Dockerfile
+      args:
+        BUILD_CONFIGURATION: Debug
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: DoctorService
+      target: base
+    container_name: DoctorService_1
+    depends_on:
+      mongo:
+        condition: service_started
+        required: true
+    entrypoint:
+      - C:\remote_debugger\x64\msvsmon.exe
+      - /noauth
+      - /anyuser
+      - /silent
+      - /nostatus
+      - /noclrwarn
+      - /nosecuritywarn
+      - /nofirewallwarn
+      - /nowowwarn
+      - /timeout:2147483646
+      - /LogDebuggeeOutputToStdOut
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ConnectionStrings__DbConnection: mongodb://mongo:27017/prescription_doctor_system_db
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+      NUGET_PACKAGES: C:\.nuget\packages
+    image: doctorservice:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath c:\.nuget\packages  "C:\app\bin\Debug\net8.0\DoctorService.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: dotnet --roll-forward Major C:\VSTools\DistrolessHelper\DistrolessHelper.dll --stop dotnet
+      com.microsoft.visualstudio.debuggee.program: '"C:\Program Files\dotnet\dotnet.exe"'
+      com.microsoft.visualstudio.debuggee.workingdirectory: C:\app
+    networks:
+      app_network: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "8080"
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\Mert\AppData\Roaming\Microsoft\UserSecrets
+        target: C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Mert\source\repos\PrescriptionAndDoctorVisitManagementAPI\DoctorService
+        target: c:\app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Mert\source\repos\PrescriptionAndDoctorVisitManagementAPI
+        target: c:\src
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Mert\onecoremsvsmon\17.10.20624.3426
+        target: c:\remote_debugger
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Mert\.nuget\packages
+        target: c:\.nuget\packages
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Mert\AppData\Roaming\ASP.NET\Https
+        target: C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\win-x64\net8.0
+        target: C:\VSTools
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload
+        target: C:\HotReloadAgent
+        read_only: true
+        bind:
+          create_host_path: true
+  mongo:
+    container_name: mongodb
+    image: mongo:latest
+    networks:
+      app_network: null
+    ports:
+      - mode: ingress
+        target: 27017
+        published: "27017"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: mongo_data
+        target: /data/db
+        volume: {}
+networks:
+  app_network:
+    name: dockercompose11995515512830408954_app_network
+    driver: host
+volumes:
+  mongo_data:
+    name: dockercompose11995515512830408954_mongo_data
+    driver: local

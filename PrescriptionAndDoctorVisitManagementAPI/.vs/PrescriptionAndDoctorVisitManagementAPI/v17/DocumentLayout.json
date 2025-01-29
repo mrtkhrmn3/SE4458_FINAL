@@ -1,0 +1,215 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|c:\\users\\mert\\source\\repos\\prescriptionanddoctorvisitmanagementapi\\prescriptionservice\\controllers\\prescriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|solutionrelative:prescriptionservice\\controllers\\prescriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|c:\\users\\mert\\source\\repos\\prescriptionanddoctorvisitmanagementapi\\prescriptionservice\\dtos\\getprescriptionsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|solutionrelative:prescriptionservice\\dtos\\getprescriptionsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|c:\\users\\mert\\source\\repos\\prescriptionanddoctorvisitmanagementapi\\prescriptionservice\\dtos\\prescriptiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|solutionrelative:prescriptionservice\\dtos\\prescriptiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|c:\\users\\mert\\source\\repos\\prescriptionanddoctorvisitmanagementapi\\prescriptionservice\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|solutionrelative:prescriptionservice\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|c:\\users\\mert\\source\\repos\\prescriptionanddoctorvisitmanagementapi\\prescriptionservice\\repositories\\prescriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|solutionrelative:prescriptionservice\\repositories\\prescriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|c:\\users\\mert\\source\\repos\\prescriptionanddoctorvisitmanagementapi\\prescriptionservice\\repositories\\iprescriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|solutionrelative:prescriptionservice\\repositories\\iprescriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|c:\\users\\mert\\source\\repos\\prescriptionanddoctorvisitmanagementapi\\prescriptionservice\\schedulers\\medicineupdatejob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|solutionrelative:prescriptionservice\\schedulers\\medicineupdatejob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|c:\\users\\mert\\source\\repos\\prescriptionanddoctorvisitmanagementapi\\prescriptionservice\\services\\prescriptionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|solutionrelative:prescriptionservice\\services\\prescriptionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|c:\\users\\mert\\source\\repos\\prescriptionanddoctorvisitmanagementapi\\prescriptionservice\\services\\iprescriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|solutionrelative:prescriptionservice\\services\\iprescriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|c:\\users\\mert\\source\\repos\\prescriptionanddoctorvisitmanagementapi\\prescriptionservice\\token\\tokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|solutionrelative:prescriptionservice\\token\\tokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|c:\\users\\mert\\source\\repos\\prescriptionanddoctorvisitmanagementapi\\prescriptionservice\\token\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2499F3-12FE-48FE-B061-1E5D88B07214}|PrescriptionService\\PrescriptionService.csproj|solutionrelative:prescriptionservice\\token\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PrescriptionController.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Controllers\\PrescriptionController.cs",
+              "RelativeDocumentMoniker": "PrescriptionService\\Controllers\\PrescriptionController.cs",
+              "ToolTip": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Controllers\\PrescriptionController.cs",
+              "RelativeToolTip": "PrescriptionService\\Controllers\\PrescriptionController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:51:35.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetPrescriptionsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\DTOs\\GetPrescriptionsDTO.cs",
+              "RelativeDocumentMoniker": "PrescriptionService\\DTOs\\GetPrescriptionsDTO.cs",
+              "ToolTip": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\DTOs\\GetPrescriptionsDTO.cs",
+              "RelativeToolTip": "PrescriptionService\\DTOs\\GetPrescriptionsDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:51:19.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PrescriptionDto.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\DTOs\\PrescriptionDto.cs",
+              "RelativeDocumentMoniker": "PrescriptionService\\DTOs\\PrescriptionDto.cs",
+              "ToolTip": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\DTOs\\PrescriptionDto.cs",
+              "RelativeToolTip": "PrescriptionService\\DTOs\\PrescriptionDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:51:18.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Prescription.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Entities\\Prescription.cs",
+              "RelativeDocumentMoniker": "PrescriptionService\\Entities\\Prescription.cs",
+              "ToolTip": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Entities\\Prescription.cs",
+              "RelativeToolTip": "PrescriptionService\\Entities\\Prescription.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:51:14.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PrescriptionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Repositories\\PrescriptionRepository.cs",
+              "RelativeDocumentMoniker": "PrescriptionService\\Repositories\\PrescriptionRepository.cs",
+              "ToolTip": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Repositories\\PrescriptionRepository.cs",
+              "RelativeToolTip": "PrescriptionService\\Repositories\\PrescriptionRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:51:12.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPrescriptionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Repositories\\IPrescriptionRepository.cs",
+              "RelativeDocumentMoniker": "PrescriptionService\\Repositories\\IPrescriptionRepository.cs",
+              "ToolTip": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Repositories\\IPrescriptionRepository.cs",
+              "RelativeToolTip": "PrescriptionService\\Repositories\\IPrescriptionRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:51:12.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MedicineUpdateJob.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Schedulers\\MedicineUpdateJob.cs",
+              "RelativeDocumentMoniker": "PrescriptionService\\Schedulers\\MedicineUpdateJob.cs",
+              "ToolTip": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Schedulers\\MedicineUpdateJob.cs",
+              "RelativeToolTip": "PrescriptionService\\Schedulers\\MedicineUpdateJob.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:50:54.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PrescriptionsService.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Services\\PrescriptionsService.cs",
+              "RelativeDocumentMoniker": "PrescriptionService\\Services\\PrescriptionsService.cs",
+              "ToolTip": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Services\\PrescriptionsService.cs",
+              "RelativeToolTip": "PrescriptionService\\Services\\PrescriptionsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:50:41.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IPrescriptionService.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Services\\IPrescriptionService.cs",
+              "RelativeDocumentMoniker": "PrescriptionService\\Services\\IPrescriptionService.cs",
+              "ToolTip": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Services\\IPrescriptionService.cs",
+              "RelativeToolTip": "PrescriptionService\\Services\\IPrescriptionService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:50:40.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TokenHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Token\\TokenHandler.cs",
+              "RelativeDocumentMoniker": "PrescriptionService\\Token\\TokenHandler.cs",
+              "ToolTip": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Token\\TokenHandler.cs",
+              "RelativeToolTip": "PrescriptionService\\Token\\TokenHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:50:38.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Token.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Token\\Token.cs",
+              "RelativeDocumentMoniker": "PrescriptionService\\Token\\Token.cs",
+              "ToolTip": "C:\\Users\\Mert\\source\\repos\\PrescriptionAndDoctorVisitManagementAPI\\PrescriptionService\\Token\\Token.cs",
+              "RelativeToolTip": "PrescriptionService\\Token\\Token.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T16:50:37.868Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

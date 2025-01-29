@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .login-form {
+            display: none;
+            margin-top: 20px;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Login Type</h1>
+        <button id="doctorLoginBtn">Doctor Login</button>
+        <button id="pharmacyLoginBtn">Pharmacy Login</button>
+
+        <div id="doctorLoginForm" class="login-form">
+            <h2>Doctor Login</h2>
+            <input type="text" id="doctorUsername" placeholder="Username" required>
+            <input type="password" id="doctorPassword" placeholder="Password" required>
+            <button onclick="doctorLogin()">Login</button>
+        </div>
+
+        <div id="pharmacyLoginForm" class="login-form">
+            <h2>Pharmacy Login</h2>
+            <input type="text" id="pharmacyUsername" placeholder="Username" required>
+            <input type="password" id="pharmacyPassword" placeholder="Password" required>
+            <button onclick="pharmacyLogin()">Login</button>
+        </div>
+    </div>
+
+    <script>
+        const doctorLoginBtn = document.getElementById('doctorLoginBtn');
+        const pharmacyLoginBtn = document.getElementById('pharmacyLoginBtn');
+        const doctorLoginForm = document.getElementById('doctorLoginForm');
+        const pharmacyLoginForm = document.getElementById('pharmacyLoginForm');
+
+        doctorLoginBtn.addEventListener('click', () => {
+            doctorLoginForm.style.display = 'block';
+            pharmacyLoginForm.style.display = 'none';
+        });
+
+        pharmacyLoginBtn.addEventListener('click', () => {
+            pharmacyLoginForm.style.display = 'block';
+            doctorLoginForm.style.display = 'none';
+        });
+
+        async function doctorLogin() {
+            const username = document.getElementById('doctorUsername').value;
+            const password = document.getElementById('doctorPassword').value;
+
+            try {
+                const response = await fetch('http://localhost:5140/doctor/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    localStorage.setItem("userType", "doctor");
+                    window.location.href = "doctor-dashboard.html"; // Redirect to doctor page
+                } else {
+                    alert(`Login failed: ${result.message}`);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred during doctor login.');
+            }
+        }
+
+        async function pharmacyLogin() {
+            const username = document.getElementById('pharmacyUsername').value;
+            const password = document.getElementById('pharmacyPassword').value;
+
+            try {
+                const response = await fetch('http://localhost:5140/pharmacy/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    localStorage.setItem("userType", "pharmacy");
+                    window.location.href = "pharmacy-dashboard.html"; // Redirect to pharmacy page
+                } else {
+                    alert(`Login failed: ${result.message}`);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred during pharmacy login.');
+            }
+        }
+    </script>
+</body>
+</html>
